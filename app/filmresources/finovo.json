@@ -1,0 +1,25 @@
+{
+  "id": "finovo",
+  "title": "finovo",
+  "abstract": "\"Fin\" is the end and \"novo\" is a new beginning, a photofilm about a cemetery café in Berlin.",
+  "filminfo": "2013, 13:00 min, Photofilm.",
+  "credits": [
+    "Directed by Claudio Winter",
+    "Montage by Trang Nguyen",
+    "Photography by Martin Gasch",
+    "Sound by Ronja Solger",
+    "Music by Dominik Campus"
+  ],
+  "festivals": [
+    "Queersicht Filmfestival 2014",
+    "Filmfest Berlin Lichtenberg 2014",
+    "Open Eyes Filmfest 2014",
+    "Kasseler Dokumenta 2013"
+  ],
+  "awards": [
+  
+  ],
+  "vidSrc": "https://player.vimeo.com/video/64440726?title=0&byline=0&portrait=0&color=ff5025",
+  "tags": "documentary",
+  "poster": "filmposters/finovo.jpg" 
+}

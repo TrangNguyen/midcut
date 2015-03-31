@@ -1,0 +1,59 @@
+<hr>
+
+<div id="subheader" ng-show="!playerOpened">
+  <blockquote>
+    <p>&#8220;{{subheader.quote}}&#8221;</p>
+    <p><cite>{{subheader.author}}</cite></p>
+  </blockquote>
+</div>
+
+<hr>
+
+<div class="row" ng-if="playerOpened" id="{{filmToPlay.id}}">
+  <div class="small-12 columns">
+  <h2>{{filmToPlay.title}}</h2>
+    <div class="flex-video widescreen">
+      <iframe src="{{filmToPlay.vidSrc}}" width="748" height="421" frameborder="0" webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="">
+      </iframe>
+    </div>
+    <div id="content">
+      <p>{{filmToPlay.abstract}}</p>
+      <ul>
+        <li ng-repeat="credit in filmToPlay.credits">{{credit}}</li>
+      </ul>    
+      <a class="extra" ng-click="extra=!extra">{{!extra && 'More' || 'Less'}}</a>
+      
+      <div id="extra" ng-show="extra">
+        <p>{{filmToPlay.filminfo}}</p>
+        <p ng-if="filmToPlay.awards.length !==0">Awards</p>
+        <ul ng-if="filmToPlay.awards.length !==0">
+          <li ng-repeat="award in filmToPlay.awards">{{award}}</li>
+        </ul>
+        <p ng-if="filmToPlay.festivals.length !==0">Festivals</p>
+        <ul ng-if="filmToPlay.festivals.length !==0">
+          <li ng-repeat="festival in filmToPlay.festivals">{{festival}}</li>
+        </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+<hr>
+
+<div class="row" id="filmsOverview" >
+  <ul class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+    <li ng-repeat="film in films | filter: filteredFilms" ng-click="showFilm(film.id)">
+      <img src="{{film.poster}}">
+      <h2 class="{{film.tags}}">
+       {{film.title}}
+      </h2>
+      <p class="{{film.tags}}">
+       {{film.tags}}
+      </p>
+    </li>
+  </ul>   
+</div>
+
+
+
+

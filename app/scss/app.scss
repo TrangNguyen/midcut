@@ -1,0 +1,189 @@
+@charset "UTF-8";
+
+/* Import Foundation */
+@import
+  "foundation/settings",
+  "foundation";
+
+$grey:         rgba(42,43,42,1);
+$lightgrey:    rgba(202,202,202,1);
+$mediumgrey:   rgba(165,165,165,1);
+$documentary:  rgba(82,255,255,1);
+$fiction:      rgba(0,255,70,1);
+$installation: rgba(207,255,3,1);
+
+$globalspacing: rem-calc(10);
+
+@mixin noselect() {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+       -o-user-select: none;
+          user-select: none; 
+}
+
+html, body {
+  background-color: $body-bg;
+  height: 100%;
+}
+
+#logo {
+  position: fixed;
+  top: ($globalspacing * 2);
+  left: ($globalspacing * 2);
+  width: rem-calc(50);
+  height: rem-calc(50);
+  max-width: rem-calc(50);
+  max-height: rem-calc(50);
+  z-index: 100;
+  background-color: $lightgrey;
+  @include noselect();
+  
+  img {
+    max-width: rem-calc(50);
+    max-height: rem-calc(50);
+    width: rem-calc(50);
+    height: rem-calc(50);
+  }
+  
+  &.All {
+    background-color: $lightgrey;
+  }
+  
+  &.Documentary {
+    background-color: $documentary;
+  }
+  
+  &.Installation {
+    background-color: $installation;
+  }
+  
+  &.Fiction {
+    background-color: $fiction;
+  }
+  &.active {
+    background-color: $lightgrey !important;
+  }
+}
+
+
+#mainNav {
+  position: fixed;
+  top: ($globalspacing * 2);
+  left: (($globalspacing * 2) + rem-calc(50));
+  width: rem-calc(250);
+  z-index: 99;
+  @include noselect();
+  
+  #navToggle span {
+    display: block;
+    padding: $globalspacing;
+    color: $black;
+    text-decoration: none;
+    width: 100%;
+    height: rem-calc(50);
+    max-height: rem-calc(50);
+    &.All {
+      background-color: $grey;
+      color: $lightgrey;
+    }
+    
+    &.Documentary {
+      background-color: $documentary;
+    }
+    
+    &.Installation {
+      background-color: $installation;
+    }
+    
+    &.Fiction {
+      background-color: $fiction;
+    }
+    
+    &.active {
+      background-color: $mediumgrey !important;
+      color: $mediumgrey;
+    }
+  }
+   
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+  }
+  li {
+    margin: 0;
+  }
+  li a {
+    
+    display: block;
+    padding: $globalspacing;
+    color: $black;
+    text-decoration: none;
+    width: 100%;
+    height: rem-calc(50);
+    
+    &.all {
+      background-color: $grey;
+      color: $lightgrey;
+      &:hover {
+        background-color: $black;
+      }
+    }
+    
+     &.fiction {
+       background-color: $fiction;
+       &:hover {
+         background-color: $lightgrey;
+       }
+     }
+    
+    &.installation {
+      background-color: $installation;
+      &:hover {
+        background-color: $lightgrey;
+      }
+    }
+    
+    &.documentary {
+      background-color: $documentary;
+      &:hover {
+        background-color: $lightgrey;
+      }
+    }  
+      
+  } 
+  
+}
+
+.arrow-up {
+  position: absolute;
+  top: 19px;
+  right: 12px;
+	width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;	
+	border-bottom: 12px solid $black;
+	&.All {
+	  border-bottom: 12px solid $lightgrey !important;
+	}
+	
+}
+
+.arrow-down {
+  position: absolute;
+  top: 19px;
+  right: 12px;
+	width: 0; 
+	height: 0; 
+	border-left: 12px solid transparent;
+	border-right: 12px solid transparent;	
+	border-top: 12px solid $black;	
+	&.All {
+	  border-top: 12px solid $lightgrey !important;
+	}
+	
+}
+

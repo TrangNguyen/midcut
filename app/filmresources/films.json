@@ -1,0 +1,79 @@
+[
+  { "id": "die-geschichte-vom-astronauten",
+    "title": "Die Geschichte vom Astronauten",
+    "tags": "fiction",
+    "poster": "filmposters/die-geschichte-vom-astronauten.jpg"    
+  },
+  {  
+    "id": "t-like-a-cross",
+    "title": "t like a cross",
+    "tags": "installation",
+    "poster": "filmposters/blank.jpg"
+  },
+  {
+    "id": "finovo",
+    "title": "finovo",
+    "tags": "documentary",
+    "poster": "filmposters/finovo.jpg"   
+  },
+  {
+    "id": "nicht-weit-von-mir",
+    "title": "Nicht weit von mir",
+    "tags": "fiction",
+    "poster": "filmposters/nicht-weit-von-mir.jpg"   
+  },
+  {
+    "id": "redfern",
+    "title": "Redfern",
+    "tags": "documentary",
+    "poster": "filmposters/blank.jpg"   
+  },
+  {
+    "id": "hanoi-transition",
+    "title": "Hanoi – Transition",
+    "tags": "installation",
+    "poster": "filmposters/hanoi-transition.jpg"   
+  },
+  {
+    "id": "tage-des-regens",
+    "title": "Tage des Regens",
+    "tags": "documentary",
+    "poster": "filmposters/tage-des-regens.jpg"   
+  },
+  {
+    "id": "leerfahrt",
+    "title": "Leerfahrt",
+    "tags": "fiction",
+    "poster": "filmposters/leerfahrt.jpg" 
+  },
+  {
+    "id": "here-be-dragons",
+    "title": "Here be Dragons",
+    "tags": "documentary",
+    "poster": "filmposters/blank.jpg"   
+  },
+  {
+    "id": "moon",
+    "title": "moon",
+    "tags": "installation",
+    "poster": "filmposters/blank.jpg"   
+  },
+  {
+    "id": "lil-a",
+    "title": "lil'A",
+    "tags": "documentary",
+    "poster": "filmposters/lil-a.jpg" 
+  },
+  {
+    "id": "mannequin",
+    "title": "Mannequin",
+    "tags": "fiction",
+    "poster": "filmposters/blank.jpg"   
+  },
+  {
+    "id": "lottoboy",
+    "title": "Lottoboy",
+    "tags": "documentary",
+    "poster": "filmposters/blank.jpg"   
+  }
+]
