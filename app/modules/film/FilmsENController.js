@@ -1,6 +1,6 @@
 define([], function() {
   'use strict';
-  function FilmsENController($scope, $anchorScroll, $location, FilmsENFactory, ScrollService, $sce) {
+  function FilmsENController($scope, $anchorScroll, $location, FilmsENFactory, ScrollService, $sce, $timeout) {
     
     //filter list    
     $scope.allFilters = [
@@ -8,21 +8,24 @@ define([], function() {
       title: "Documentary",
       subheader : {
         quote: "What makes the movie a movie is the editing.",
-        author: "Zach Staenberg"
+        author: "Zach Staenberg",
+        tag: "documentary"
       }
     }, {
       name: "fiction",
       title: "Fiction",
       subheader : {
         quote: "When the shooting stops, the cutting begins.",
-        author: "Ralph Rosenblum"
+        author: "Ralph Rosenblum",
+        tag: "fiction"
       }
     }, {
       name: "installation",
       title: "Installation",
       subheader : {
         quote: "Between the Black Box and the White Cube.",
-        author: "Andrew V. Uroskie"
+        author: "Andrew V. Uroskie",
+        tag: "installation"
       }
     }];
     
@@ -59,47 +62,64 @@ define([], function() {
         $location.search('filter', 'all');
         $scope.filteredFilms.tags = '';
         $scope.subheader = {
-          quote: "I make films because I have something to share.",
-          author: "Trang Nguyen"
+          quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
+          author: "Trang Nguyen",
+          tag: "all"
         };
       } 
     } else {
       $location.search('filter', 'all');
       $scope.filteredFilms.tags ='';
       $scope.subheader = {
-        quote: "I make films because I have something to share.",
-        author: "Trang Nguyen"
+        quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
+        author: "Trang Nguyen",
+        tag: "all"
       }; 
     }
         
     // if film title exist
     if($location.hash()) {
       var id= $location.hash();
-      FilmsENFactory.get({filmId: id}, function(film) {
-        $scope.playerOpened = true;
+      $scope.loading = true;
+      $scope.playerOpened = false;
+      ScrollService.scrollTo('top', 10);
+      FilmsENFactory.get({filmId: id}, function(film) {        
         $scope.filmToPlay = film;
         // tell angular to trust video player source.
         $scope.filmToPlay.vidSrc = $sce.trustAsResourceUrl(film.vidSrc);
       });
-      ScrollService.scrollTo(id);
+      $timeout(function() {
+        $scope.playerOpened = true;
+        $scope.loading = false;
+      });
     }
     
     // show film within a filter.
     $scope.showFilm = function(id) {
+      $scope.loading = true;
+      
+      ScrollService.scrollTo('top', 10);
+      
+      if($scope.playerOpened = true) {
+        $scope.playerOpened = true;
+      } else {
+        $timeout(function() {
+          $scope.playerOpened = true;         
+          $location.url('/en/film?filter='+currentFilter+'#'+id, false);          
+        });
+      }
       var currentFilter = $location.search().filter;
       FilmsENFactory.get({filmId: id}, function(film) {
-        $scope.playerOpened = true;
         $scope.filmToPlay = film;
+        $scope.loading = false; 
         // tell angular to trust video player source.
-        $scope.filmToPlay.vidSrc = $sce.trustAsResourceUrl(film.vidSrc);
-        $location.url('/en/film?filter='+currentFilter+'#'+id, false);
-        ScrollService.scrollTo(id);               
+        $scope.filmToPlay.vidSrc = $sce.trustAsResourceUrl(film.vidSrc);                            
       });
-        
+
     };
    
   }
   
-  FilmsENController.$inject=['$scope', '$anchorScroll', '$location', 'FilmsENFactory', 'ScrollService', '$sce'];
+  FilmsENController.$inject=['$scope', '$anchorScroll', '$location', 'FilmsENFactory', 'ScrollService', '$sce', '$timeout'];
   return FilmsENController;
 });

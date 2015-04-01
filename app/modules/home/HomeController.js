@@ -1,6 +1,6 @@
 define([], function() {
   'use strict';
-  function HomeController($scope, $location, $window) {
+  function HomeController($scope, $location) {
     
     
     //filter list    
@@ -58,6 +58,6 @@ define([], function() {
        
   }
   
-  HomeController.$inject=['$scope', '$location', '$window'];
+  HomeController.$inject=['$scope', '$location'];
   return HomeController;
 });

@@ -2,12 +2,12 @@
 This is the top app level file, where all modules are registered as dependencies and bootstrap to the app. The default route also set here in the config.
 */
 
-define(['angular', 'ngRoute', 'ngResource', 'ngSanitize', 'home/HomeModule', 'film/FilmModule' ],
-    function (angular, ngRoute, ngResource, ngSanitize, filmModule, homeModule) {
+define(['angular', 'ngRoute', 'ngResource', 'ngSanitize', 'ngAnimate', 'home/HomeModule', 'film/FilmModule' ],
+    function (angular, ngRoute, ngResource, ngSanitize, ngAnimate, filmModule, homeModule) {
   "use strict";
   var appName = "app";
 
-  var dependencies = ['ngRoute', 'ngResource', filmModule(), homeModule()];
+  var dependencies = ['ngRoute', 'ngResource', 'ngSanitize', 'ngAnimate', filmModule(), homeModule()];
 
   var app = angular.module(appName, dependencies);
 

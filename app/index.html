@@ -29,7 +29,7 @@
   
   </head>
   
-  <body ng-controller="HomeController">
+  <body ng-controller="HomeController" id="top">
     <!-- Main navigation-->
     <div id="logo" class="{{selectedFilter}}" ng-class="{active: toggle===true}">
       <a ng-click="toggle=!toggle"><img src="images/midcut2.svg"></a>
@@ -45,7 +45,7 @@
         </li>
         <li ng-repeat="filter in allFilters">
           <a class="{{filter.name}}" href="#/en/film/?filter={{filter.name}}" ng-click="changeFilter(filter.title)">{{filter.title}}</a>
-        </li>     
+        </li>   
       </ul>
     </nav>
     

@@ -83,6 +83,7 @@ html, body {
     width: 100%;
     height: rem-calc(50);
     max-height: rem-calc(50);
+    line-height: rem-calc(30);
     &.All {
       background-color: $grey;
       color: $lightgrey;
@@ -123,6 +124,7 @@ html, body {
     text-decoration: none;
     width: 100%;
     height: rem-calc(50);
+    line-height: rem-calc(30);
     
     &.all {
       background-color: $grey;
@@ -151,7 +153,19 @@ html, body {
       &:hover {
         background-color: $lightgrey;
       }
-    }  
+    }
+    &.about {
+      background-color: $mediumgrey;
+      &:hover {
+        background-color: $lightgrey;
+      }
+    }
+    &.contact {
+      background-color: $mediumgrey;
+      &:hover {
+        background-color: $lightgrey;
+      }
+    }   
       
   } 
   
@@ -187,3 +201,102 @@ html, body {
 	
 }
 
+#filmsOverview {
+  padding-top: ($globalspacing * 2);
+  
+  li {
+    position:relative;
+    &:hover  {
+      cursor: pointer;
+    }
+        
+  }
+  
+  p {
+    position: absolute;
+    top: ($globalspacing / 2);
+    left: ($globalspacing * 2);
+    z-index: 98;
+    
+    font-size: $paragraph-font-size - rem-calc(2);
+    
+    @media #{$medium-up} {
+      font-size: $paragraph-font-size - rem-calc(1);
+    }
+    
+    &.fiction {
+       color: $fiction;       
+     }
+    
+    &.installation {
+      color: $installation;
+      }
+    
+    &.documentary {
+      color: $documentary;
+      }  
+  }
+}
+
+#subheader {
+  padding-top: (($globalspacing * 6) + rem-calc(50));
+  @media #{$medium-up} {
+    padding-left: (($globalspacing * 4) + rem-calc(50));
+    padding-right: (($globalspacing * 4) + rem-calc(50));
+  }
+  span {
+    color: $mediumgrey;    
+  }
+}
+
+.current-film {
+  padding-top: (($globalspacing * 4) + rem-calc(50));
+  background-color: $lightgrey ;
+  opacity: 1;
+}
+
+
+
+//.current-film.ng-hide-add.ng-hide-add-active,
+//.current-film.ng-hide-remove.ng-hide-remove-active {
+//   -webkit-transition:all linear 1s;
+//           transition:all linear 1s;
+//}
+//.current-film.ng-hide{
+//  opacity: 0;
+//  padding-top: (($globalspacing * 4) + rem-calc(50));
+//  background-color: $lightgrey ;  
+//}
+
+a.extra {
+  padding-bottom: ($globalspacing * 2);
+  @include noselect();
+}
+
+#content {
+  ul {
+    list-style-type: none;
+    margin-left: 0;
+    
+    li {
+      border-top: 1px solid $mediumgrey;
+      font-size: $paragraph-font-size - rem-calc(2);
+      padding: ($globalspacing / 4);
+    }
+    
+  }
+  h3 {
+    font-size: $paragraph-font-size;
+    margin-bottom: 0;
+    padding-bottom: ($globalspacing / 2);
+  }
+}
+
+#loader {
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: $documentary;
+  z-index: 100;
+ 
+}
