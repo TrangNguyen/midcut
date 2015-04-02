@@ -6,7 +6,15 @@ define(['angular', 'home/HomeController', 'home/ScrollService', 'home/SlideDownD
   module.controller('HomeController', HomeController);
   module.service('ScrollService', ScrollService);
   module.directive('slideDown', SlideDownDirective);
-
+  
+  module.config(['$routeProvider', function($routeProvider){
+    $routeProvider.when('/en/about', {
+      templateUrl: 'modules/home/about.html'    
+    });
+  }]);
+  
+  
+  
   return function () {
     return moduleName;
   };

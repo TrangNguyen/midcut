@@ -255,19 +255,6 @@ html, body {
   opacity: 1;
 }
 
-
-
-//.current-film.ng-hide-add.ng-hide-add-active,
-//.current-film.ng-hide-remove.ng-hide-remove-active {
-//   -webkit-transition:all linear 1s;
-//           transition:all linear 1s;
-//}
-//.current-film.ng-hide{
-//  opacity: 0;
-//  padding-top: (($globalspacing * 4) + rem-calc(50));
-//  background-color: $lightgrey ;  
-//}
-
 a.extra {
   padding-bottom: ($globalspacing * 2);
   @include noselect();
@@ -299,4 +286,37 @@ a.extra {
   background-color: $documentary;
   z-index: 100;
  
+}
+#about-page {
+  padding-top: (($globalspacing * 4) + rem-calc(50));
+  
+  li {
+    &.fiction {
+       border: 2px solid  $fiction;       
+     }
+    
+    &.installation {
+      border: 2px solid  $installation;
+      }
+    
+    &.documentary {
+      border: 2px solid  $documentary;
+      }   
+  }
+  
+  #filmography {
+    background-color: $lightgrey;
+    
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      
+      li {
+        border-top: 1px solid $mediumgrey;
+        font-size: $paragraph-font-size - rem-calc(2);
+        padding: ($globalspacing / 4);
+      }
+      
+    }    
+  }
 }

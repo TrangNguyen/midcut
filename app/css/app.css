@@ -9534,7 +9534,7 @@ html, body {
   opacity: 1;
 }
 
-/* line 271, ../scss/app.scss */
+/* line 258, ../scss/app.scss */
 a.extra {
   padding-bottom: 1.25rem;
   -webkit-user-select: none;
@@ -9544,31 +9544,63 @@ a.extra {
   user-select: none;
 }
 
-/* line 277, ../scss/app.scss */
+/* line 264, ../scss/app.scss */
 #content ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 281, ../scss/app.scss */
+/* line 268, ../scss/app.scss */
 #content ul li {
   border-top: 1px solid #a5a5a5;
   font-size: 0.875rem;
   padding: 0.15625rem;
 }
-/* line 288, ../scss/app.scss */
+/* line 275, ../scss/app.scss */
 #content h3 {
   font-size: 1rem;
   margin-bottom: 0;
   padding-bottom: 0.3125rem;
 }
 
-/* line 295, ../scss/app.scss */
+/* line 282, ../scss/app.scss */
 #loader {
   position: fixed;
   top: 0;
   right: 0;
   background-color: #52ffff;
   z-index: 100;
+}
+
+/* line 290, ../scss/app.scss */
+#about-page {
+  padding-top: 5.625rem;
+}
+/* line 294, ../scss/app.scss */
+#about-page li.fiction {
+  border: 2px solid #00ff46;
+}
+/* line 298, ../scss/app.scss */
+#about-page li.installation {
+  border: 2px solid #cfff03;
+}
+/* line 302, ../scss/app.scss */
+#about-page li.documentary {
+  border: 2px solid #52ffff;
+}
+/* line 307, ../scss/app.scss */
+#about-page #filmography {
+  background-color: #cacaca;
+}
+/* line 310, ../scss/app.scss */
+#about-page #filmography ul {
+  list-style-type: none;
+  margin-left: 0;
+}
+/* line 314, ../scss/app.scss */
+#about-page #filmography ul li {
+  border-top: 1px solid #a5a5a5;
+  font-size: 0.875rem;
+  padding: 0.15625rem;
 }
 
 /*# sourceMappingURL=app.css.map */

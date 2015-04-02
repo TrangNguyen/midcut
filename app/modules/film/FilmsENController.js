@@ -2,6 +2,11 @@ define([], function() {
   'use strict';
   function FilmsENController($scope, $anchorScroll, $location, FilmsENFactory, ScrollService, $sce, $timeout) {
     
+    /* helper function*/    
+    function capitalizeFirstLetter(string) {
+      return string.charAt(0).toUpperCase() + string.slice(1);
+    }
+    
     //filter list    
     $scope.allFilters = [
     { name: "documentary",
@@ -32,9 +37,10 @@ define([], function() {
     $scope.playerOpened = false; // default close player
     
     //films to be filtered
-
-    $scope.films = FilmsENFactory.query();
-    
+    FilmsENFactory.query(function(films) {
+      $scope.films = films;      
+    });   
+        
     // prototpye http://jsfiddle.net/x03o3bpj/, the filtered results
     $scope.filteredFilms = {};
  
@@ -56,10 +62,12 @@ define([], function() {
       if(i > -1) {
         $scope.subheader = $scope.allFilters[i].subheader;
         $scope.filteredFilms.tags = selectedFilter;
-        //console.log($scope.subheader);        
+        //tell homecontroller to change the filter
+        var currentFilter = capitalizeFirstLetter(selectedFilter);
+        $scope.$emit('selectedFilter', currentFilter);
+       
       } 
       else {
-        $location.search('filter', 'all');
         $scope.filteredFilms.tags = '';
         $scope.subheader = {
           quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
@@ -68,7 +76,6 @@ define([], function() {
         };
       } 
     } else {
-      $location.search('filter', 'all');
       $scope.filteredFilms.tags ='';
       $scope.subheader = {
         quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
@@ -91,12 +98,14 @@ define([], function() {
       $timeout(function() {
         $scope.playerOpened = true;
         $scope.loading = false;
-      });
+      }, 500);
     }
     
     // show film within a filter.
     $scope.showFilm = function(id) {
       $scope.loading = true;
+      var currentFilter = $location.search().filter;
+//      $scope.selectedFilter = currentFilter;
       
       ScrollService.scrollTo('top', 10);
       
@@ -104,16 +113,15 @@ define([], function() {
         $scope.playerOpened = true;
       } else {
         $timeout(function() {
-          $scope.playerOpened = true;         
-          $location.url('/en/film?filter='+currentFilter+'#'+id, false);          
-        });
+          $scope.playerOpened = true;                    
+        }, 500);
       }
-      var currentFilter = $location.search().filter;
       FilmsENFactory.get({filmId: id}, function(film) {
         $scope.filmToPlay = film;
         $scope.loading = false; 
         // tell angular to trust video player source.
-        $scope.filmToPlay.vidSrc = $sce.trustAsResourceUrl(film.vidSrc);                            
+        $scope.filmToPlay.vidSrc = $sce.trustAsResourceUrl(film.vidSrc); 
+        $location.url('/en/film?filter='+currentFilter+'#'+id, false);                           
       });
 
     };

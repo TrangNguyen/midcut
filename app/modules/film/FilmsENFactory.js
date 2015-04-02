@@ -2,7 +2,7 @@ define([], function(){
   'use strict';
   
   function FilmsENFactory($resource) {
-    return $resource('../app/filmresources/:filmId.json', {}, {
+    return $resource('filmresources/:filmId.json', {}, {
       query: {method:'GET', params:{filmId:'films'}, isArray:true}
     });  
   }
@@ -10,5 +10,3 @@ define([], function(){
   return FilmsENFactory;
 
 });
-
-//search method can be called as FilmsENFactory.$search({tags: 'abc'});

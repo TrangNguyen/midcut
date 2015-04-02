@@ -24,24 +24,10 @@ define([], function() {
       }  
       return -1;
     }
-         
-    // if filter exist on url, return the selectedFilter.
-    if($location.search().filter) {
-      var selectedFilter = $location.search().filter;
-      //compare against valid filters                  
-      var i = indexOfObjectWithProperty('name', selectedFilter, $scope.allFilters);
-      if(i > -1) {
-        $scope.selectedFilter = $scope.allFilters[i].title;
-        //console.log($scope.subheader);        
-      } 
-      else {
-        $location.search('filter', 'all');
-        $scope.selectedFilter = "All Films";
-      } 
-    } else {
-      $location.search('filter', 'all');
-      $scope.selectedFilter = "All Films";
-    }
+    //if filmscontroller return a filter
+    $scope.$on('selectedFilter', function(event, value) {
+      $scope.selectedFilter = value;
+    });
     
     // when a filter on menu is selected
     $scope.changeFilter = function(tag) {

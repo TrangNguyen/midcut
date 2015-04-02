@@ -77,7 +77,7 @@ define([], function(){
     };
     return {
       restrict: 'A',
-      scope: { expanded: '=ngSlideDown' },
+      scope: { expanded: '=slideDown' },
       transclude: true,
       link: link,
       template: function (tElement, tAttrs) {
