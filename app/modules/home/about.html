@@ -1,10 +1,28 @@
 <div class="row" id="about-page">
+  <div class="small-12 columns" id="banner">
+    <div class="small-12 columns medium-6">
+      <ul class="inline-list">
+<!--        <li>
+          <a href=""><span>LinkedIn</span></a>
+        </li>
+        <li>
+          <a href=""><span>Google+</span></a>
+        </li>-->
+        <li>
+          <a href="skype:trangnguyen80?call"><span>Skype</span></a>
+        </li>
+        <li>
+          <a href="mailto:trangnguyen80@gmail.com"><span>Email</span></a>
+        </li>
+      </ul>
+    </div>
+  </div>
   <div class="small-12 columns">
     <h1>About me</h1>
-    <ul id="about" class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+    <ul id="about" class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
       <li class="installation">
         <h2>Trang Nguyen</h2>  
-        <p> is my name and I stand behind <a href="#/en/film">midcut</a>.</p>
+        <p> is my name and I stand behind <a href="#/en/film?filter=all">midcut</a>.</p>
         <p>I'm a Berlin-based filmmaker with Vietnamese origin. Being the first audience of the intended film, I see it in enormous amount of raw materials, and I compose it to what you see.</p>
       </li>
       <li class="fiction">
@@ -15,66 +33,104 @@
       </li>
       <li class="documentary">
         <h2>Background</h2>
-        <p><a target="_blank" href="http://www.filmuniversitaet.de"> HFF "Konrad Wolf"</a> is where I learned the art of film editing. When not making films, you would find me <a target="_blank" href="http://trangnguyen.de">coding</a>, cooking, knitting, biking or hiking.
+        <p><a target="_blank" href="http://www.filmuniversitaet.de"> HFF “Konrad Wolf”</a> is where I learned the art of film editing. When not making films, you would find me <a target="_blank" href="http://trangnguyen.de">coding</a>, cooking, knitting, biking or hiking.
         </p>
       </li>
     </ul>
   </div>
+
   <div class="small-12 columns">
     <h1>Filmography</h1>
-    <ul id="filmography"class="small-block-grid-2 medium-block-grid-3 large-block-grid-4">
+    <ul id="filmography"class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
       <li class="fiction">
         <h2>Fiction-editor</h2>
         <ul>
-          <li><a href="#/en/film?filter=fiction#die-geschichte-vom-astronauten">Die Geschichte vom Astronauten</a></li>
-          <li><a href="#/en/film?filter=fiction#nicht-weit-von-mir">Nicht weit von mir</a></li>
-          <li><a href="#/en/film?filter=fiction#leerfahrt">Leerfahrt</a></li>
+          <li>Die Geschichte vom Astronauten</li>
+          <li>Nicht weit von mir</li>
+          <li>Leerfahrt</li>
+          <li>Mannequin</li>
+          <li>Chuyen cua Pao (Pao’s story)</li>
         </ul>
       </li>
       <li class="documentary">
         <h2>Documentary-editor</h2>
         <ul>
-          <li><a href="#/en/film?filter=documentary#tage-des-regens">Tage des Regens</a></li>
-          <li><a href="#/en/film?filter=documentary#finovo">finovo</a></li>
-          <li><a href="#/en/film?filter=documentary#lil-a">lil'A</a></li>
-          <li><a href="#/en/film?filter=documentary#here-be-dragon">Here be Dragons</a></li>
+          <li>Unsere Jungs</li>
+          <li>Spurensuche</li>
+          <li>Ménage à trois</li>
+          <li>Tage des Regens</li>
+          <li>finovo</li>
+          <li>lil’A</li>
+          <li>Here be Dragons</li>
         </ul>
       </li>
       <li class="documentary">
         <h2>Documentary-director</h2>
         <ul>
-          <li><a href="#/en/film?filter=documentary#redfern">Redfern</a></li>
-          <li><a href="#/en/film?filter=documentary#lottoboy">Lottoboy</a></li>
+          <li>Redfern</li>
+          <li>Lottoboy</li>
          </ul>       
       </li>
       <li class="installation">
         <h2>Video Installation-editor</h2>
         <ul>
-          <li><a href="#/en/film?filter=installation#t-like-a-cross">t like a cross</a></li>
+          <li>t like a cross</li>
         </ul>
       </li>
       <li class="installation">
         <h2>Video Installation-director</h2>
         <ul>        
-          <li><a href="#/en/film?filter=installation#hanoi-transition">Hanoi-Transition</a></li>
-          <li><a href="#/en/film?filter=installation#moon">moon</a></li>
+          <li>Hanoi – Transition</li>
+          <li>moon</li>
         </ul>
-      </li>    
+      </li>
+      <li class="documentary">
+        <h2>Miscellaneous</h2>
+        <ul>        
+          <li>Together Higher - assistant director</li>
+          <li>A dream in Hanoi - line producer</li>
+          <li>Foodhunter - assitant producer, co-host</li>
+          <li>Perfumehunter - assitant producer</li>
+        </ul>
+      </li>   
     </ul>
   </div>
-</div>
 
-<div class="row">
   <div class="small-12 columns">
-    <a ng-click="imprintOpen=!imprintOpen">Imprint</a>
+    <h2 ng-click="imprintOpen=!imprintOpen">{{!imprintOpen && ' Imprint +' || 'Imprint -'}}</h2>
+    <div style="clear: both; padding: 5px;"></div>
     <div slide-down="imprintOpen" id="imprint" lazy-render duration="2">
-      <h2>Imprint</h2>
-      <p>Something here for the imprint and legal notices.</p>
       <h2>Legal Notices</h2>
-      <p>Despite careful checking we assume no liability for the contents of external links. Responsibility for the contents of these linked websites lies solely with the persons operating them.</p>
-      <h2>About this site</h2>
-      <p>Who designed it, who built it? Who is responsible for its contents?</p>
-      <h2>Picture credits</h2>        
+      <p>Despite careful checking I assume no liability for the contents of external links. Responsibility for the contents of these linked websites lies solely with the persons operating them.</p>
+      <div class="small-block-grid-1 medium-block-grid-2 large-block-grid-3">
+        <div class="medium-6 columns" id="site-info">
+          <h2>About this site</h2>
+          <ul>
+            <li>Concept and development: Trang Nguyen</li>
+            <li>Design: Berliner Süden</li>
+            <li>Logo design: Roman Bejnar</li>
+            <li>Font: filson pro by  Olivier Gourvat</li>
+            <li>Technologies: AngularJS, RequireJS, Foundation</li>
+          </ul>
+        </div>
+        <div class="medium-6 columns">
+          <h2>Picture credits</h2>
+          <p>All still images used in this site are mine unless otherwise credited.</p>
+          <ul>
+            <li>Tage des Regens: &copy; <a target="_blank" href="http://www.andreas-hartmann.com/">Andreas Hartmann</a></li>
+            <li>Lil’A: &copy; <a target="_blank" href="http://www.nicolaimehring.de/Lil-A">Nicolai Mehring</a></li>
+            <li>Leerfahrt: &copy; <a target="_blank" href="http://co-film.de/?page_id=11">Martis Burkhardt</a></li>
+            <li>finovo: &copy; Martin Gasch</li>
+            <li>Nicht weit von mir: &copy; <a target="_blank" href="http://nichtweitvonmir.com/">Rüdiger Görlitz</a></li>
+            <li>Die Geschichte vom Astronauten: &copy; <a target="_blank" href="http://ericferranti.com/">Eric Ferranti</a></li>
+            <li>redfern: &copy; <a target="_blank" href="http://www.tanialambert.com/">Tania Lambert</a></li>
+            <li>t like a cross: &copy; <a target="_blank" href="http://http://www.janairmert.com/">Jana Irmert</a></li>
+            
+            <li>moon:<a target="_blank" href="http://">Marieke Steinhoff?</a></li>
+          </ul>
+       </div>
+     </div>           
     </div>
   </div>
 </div>
+

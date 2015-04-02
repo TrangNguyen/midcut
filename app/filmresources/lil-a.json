@@ -1,8 +1,8 @@
 {
   "id": "lil-a",
   "title": "lil’A",
-  "abstract": "A 12 year-old boy who sets himself the goal to become the best dancer and the best choreographer in the world.",
-  "filminfo": "2008, 12:00 min.",
+  "abstract": "A 12 year-old boy who sets himself the goal to become the best dancer and the best choreographer in the world. Amando's favourite dancing style is Krumping: the fast and powerful movements of Krump give him the opportunity to let out all his aggressions.",
+  "filminfo": "2008, 12:00 min. Documentary",
   "credits": [
     "Directed by Katharina Sophie Brauer",
     "Montage by Trang Nguyen",
@@ -19,7 +19,7 @@
   "awards": [
   
   ],
-  "vidSrc": "https://player.vimeo.com/video/41012832?title=0&byline=0&portrait=0&color=ff5025",
+  "vidSrc": "https://player.vimeo.com/video/41012832?title=0&byline=0&portrait=0&color=52ffff",
   "tags": "documentary",
   "poster": "filmposters/lil-a.jpg" 
 }

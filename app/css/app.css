@@ -9274,7 +9274,7 @@ th.hide-for-touch {
 }
 /* line 25, ../scss/app.scss */
 html, body {
-  background-color: #fff;
+  background-color: #cacaca;
   height: 100%;
 }
 
@@ -9365,22 +9365,26 @@ html, body {
   background-color: #00ff46;
 }
 /* line 104, ../scss/app.scss */
+#mainNav #navToggle span.About {
+  background-color: #a5a5a5;
+}
+/* line 108, ../scss/app.scss */
 #mainNav #navToggle span.active {
   background-color: #a5a5a5 !important;
   color: #a5a5a5;
 }
-/* line 110, ../scss/app.scss */
+/* line 114, ../scss/app.scss */
 #mainNav ul {
   list-style: none;
   margin: 0;
   padding: 0;
   border: none;
 }
-/* line 116, ../scss/app.scss */
+/* line 120, ../scss/app.scss */
 #mainNav li {
   margin: 0;
 }
-/* line 119, ../scss/app.scss */
+/* line 123, ../scss/app.scss */
 #mainNav li a {
   display: block;
   padding: 0.625rem;
@@ -9390,57 +9394,49 @@ html, body {
   height: 3.125rem;
   line-height: 1.875rem;
 }
-/* line 129, ../scss/app.scss */
+/* line 133, ../scss/app.scss */
 #mainNav li a.all {
   background-color: #2a2b2a;
   color: #cacaca;
 }
-/* line 132, ../scss/app.scss */
+/* line 136, ../scss/app.scss */
 #mainNav li a.all:hover {
   background-color: #2A2A2A;
 }
-/* line 137, ../scss/app.scss */
+/* line 141, ../scss/app.scss */
 #mainNav li a.fiction {
   background-color: #00ff46;
 }
-/* line 139, ../scss/app.scss */
+/* line 143, ../scss/app.scss */
 #mainNav li a.fiction:hover {
   background-color: #cacaca;
 }
-/* line 144, ../scss/app.scss */
+/* line 148, ../scss/app.scss */
 #mainNav li a.installation {
   background-color: #cfff03;
 }
-/* line 146, ../scss/app.scss */
+/* line 150, ../scss/app.scss */
 #mainNav li a.installation:hover {
   background-color: #cacaca;
 }
-/* line 151, ../scss/app.scss */
+/* line 155, ../scss/app.scss */
 #mainNav li a.documentary {
   background-color: #52ffff;
 }
-/* line 153, ../scss/app.scss */
+/* line 157, ../scss/app.scss */
 #mainNav li a.documentary:hover {
   background-color: #cacaca;
 }
-/* line 157, ../scss/app.scss */
+/* line 161, ../scss/app.scss */
 #mainNav li a.about {
   background-color: #a5a5a5;
 }
-/* line 159, ../scss/app.scss */
+/* line 163, ../scss/app.scss */
 #mainNav li a.about:hover {
   background-color: #cacaca;
 }
-/* line 163, ../scss/app.scss */
-#mainNav li a.contact {
-  background-color: #a5a5a5;
-}
-/* line 165, ../scss/app.scss */
-#mainNav li a.contact:hover {
-  background-color: #cacaca;
-}
 
-/* line 174, ../scss/app.scss */
+/* line 171, ../scss/app.scss */
 .arrow-up {
   position: absolute;
   top: 19px;
@@ -9451,12 +9447,12 @@ html, body {
   border-right: 12px solid transparent;
   border-bottom: 12px solid #2A2A2A;
 }
-/* line 183, ../scss/app.scss */
+/* line 180, ../scss/app.scss */
 .arrow-up.All {
   border-bottom: 12px solid #cacaca !important;
 }
 
-/* line 189, ../scss/app.scss */
+/* line 186, ../scss/app.scss */
 .arrow-down {
   position: absolute;
   top: 19px;
@@ -9467,24 +9463,25 @@ html, body {
   border-right: 12px solid transparent;
   border-top: 12px solid #2A2A2A;
 }
-/* line 198, ../scss/app.scss */
+/* line 195, ../scss/app.scss */
 .arrow-down.All {
   border-top: 12px solid #cacaca !important;
 }
 
-/* line 204, ../scss/app.scss */
+/* line 201, ../scss/app.scss */
 #filmsOverview {
   padding-top: 1.25rem;
+  background-color: #fff;
 }
-/* line 207, ../scss/app.scss */
+/* line 205, ../scss/app.scss */
 #filmsOverview li {
   position: relative;
 }
-/* line 209, ../scss/app.scss */
+/* line 207, ../scss/app.scss */
 #filmsOverview li:hover {
   cursor: pointer;
 }
-/* line 215, ../scss/app.scss */
+/* line 213, ../scss/app.scss */
 #filmsOverview p {
   position: absolute;
   top: 0.3125rem;
@@ -9493,48 +9490,48 @@ html, body {
   font-size: 0.875rem;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 215, ../scss/app.scss */
+  /* line 213, ../scss/app.scss */
   #filmsOverview p {
     font-size: 0.9375rem;
   }
 }
-/* line 227, ../scss/app.scss */
+/* line 225, ../scss/app.scss */
 #filmsOverview p.fiction {
   color: #00ff46;
 }
-/* line 231, ../scss/app.scss */
+/* line 229, ../scss/app.scss */
 #filmsOverview p.installation {
   color: #cfff03;
 }
-/* line 235, ../scss/app.scss */
+/* line 233, ../scss/app.scss */
 #filmsOverview p.documentary {
   color: #52ffff;
 }
 
-/* line 241, ../scss/app.scss */
+/* line 239, ../scss/app.scss */
 #subheader {
   padding-top: 6.875rem;
 }
 @media only screen and (min-width: 40.0625em) {
-  /* line 241, ../scss/app.scss */
+  /* line 239, ../scss/app.scss */
   #subheader {
     padding-left: 5.625rem;
     padding-right: 5.625rem;
   }
 }
-/* line 247, ../scss/app.scss */
+/* line 245, ../scss/app.scss */
 #subheader span {
   color: #a5a5a5;
 }
 
-/* line 252, ../scss/app.scss */
+/* line 250, ../scss/app.scss */
 .current-film {
   padding-top: 5.625rem;
   background-color: #cacaca;
   opacity: 1;
 }
 
-/* line 258, ../scss/app.scss */
+/* line 256, ../scss/app.scss */
 a.extra {
   padding-bottom: 1.25rem;
   -webkit-user-select: none;
@@ -9544,25 +9541,25 @@ a.extra {
   user-select: none;
 }
 
-/* line 264, ../scss/app.scss */
+/* line 262, ../scss/app.scss */
 #content ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 268, ../scss/app.scss */
+/* line 266, ../scss/app.scss */
 #content ul li {
   border-top: 1px solid #a5a5a5;
   font-size: 0.875rem;
   padding: 0.15625rem;
 }
-/* line 275, ../scss/app.scss */
+/* line 273, ../scss/app.scss */
 #content h3 {
   font-size: 1rem;
   margin-bottom: 0;
   padding-bottom: 0.3125rem;
 }
 
-/* line 282, ../scss/app.scss */
+/* line 280, ../scss/app.scss */
 #loader {
   position: fixed;
   top: 0;
@@ -9571,36 +9568,53 @@ a.extra {
   z-index: 100;
 }
 
-/* line 290, ../scss/app.scss */
+/* line 288, ../scss/app.scss */
 #about-page {
   padding-top: 5.625rem;
 }
-/* line 294, ../scss/app.scss */
-#about-page li.fiction {
-  border: 2px solid #00ff46;
+/* line 291, ../scss/app.scss */
+#about-page a {
+  color: #2A2A2A;
+  text-decoration: underline;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -o-user-select: none;
+  user-select: none;
 }
-/* line 298, ../scss/app.scss */
-#about-page li.installation {
-  border: 2px solid #cfff03;
+/* line 297, ../scss/app.scss */
+#about-page #banner {
+  max-width: 100%;
+  max-height: 3.125rem;
+  width: 100%;
+  height: 3.125rem;
+  background-color: #cfff03;
 }
-/* line 302, ../scss/app.scss */
-#about-page li.documentary {
-  border: 2px solid #52ffff;
-}
-/* line 307, ../scss/app.scss */
+/* line 305, ../scss/app.scss */
 #about-page #filmography {
-  background-color: #cacaca;
+  background-color: #fff;
 }
-/* line 310, ../scss/app.scss */
-#about-page #filmography ul {
+/* line 309, ../scss/app.scss */
+#about-page #filmography, #about-page #imprint {
+  padding-top: 0.625rem;
+}
+/* line 312, ../scss/app.scss */
+#about-page #filmography ul, #about-page #imprint ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 314, ../scss/app.scss */
-#about-page #filmography ul li {
+/* line 316, ../scss/app.scss */
+#about-page #filmography ul li, #about-page #imprint ul li {
   border-top: 1px solid #a5a5a5;
   font-size: 0.875rem;
   padding: 0.15625rem;
+}
+
+/* line 326, ../scss/app.scss */
+#footer {
+  left: 1.25rem;
+  right: 1.25rem;
+  padding-top: 0.625rem;
 }
 
 /*# sourceMappingURL=app.css.map */

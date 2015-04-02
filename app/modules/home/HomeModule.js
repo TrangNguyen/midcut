@@ -9,7 +9,7 @@ define(['angular', 'home/HomeController', 'home/ScrollService', 'home/SlideDownD
   
   module.config(['$routeProvider', function($routeProvider){
     $routeProvider.when('/en/about', {
-      templateUrl: 'modules/home/about.html'    
+      templateUrl: 'modules/home/about.html'
     });
   }]);
   

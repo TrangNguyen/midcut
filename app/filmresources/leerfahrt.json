@@ -1,8 +1,8 @@
 {
   "id": "leerfahrt",
   "title": "Leerfahrt",
-  "abstract": "An unemployed actor appears again and again in new roles as a ticket inspector in the subway.",
-  "filminfo": "2009, 20:00 min.",
+  "abstract": "An unemployed actor appears again and again in new roles as a ticket inspector in the subway. He is driven by the need to match his role model. He finally reaches his goal, but not without paying a high price.",
+  "filminfo": "2009, 20:00 min. Fiction",
   "credits": [
     "Directed by Matis Burkhardt",
     "Montage by Trang Nguyen",
@@ -23,7 +23,7 @@
     "best short, Talking Pictures Festival, 2010",
     "Best Long Form Short, Bornshorts, 2010"    
   ],
-  "vidSrc": "https://player.vimeo.com/video/41012832?title=0&byline=0&portrait=0&color=ff5025",
+  "vidSrc": "https://player.vimeo.com/video/41012832?title=0&byline=0&portrait=0&color=00ff46",
   "tags": "fiction",
   "poster": "filmposters/leerfahrt.jpg" 
 }

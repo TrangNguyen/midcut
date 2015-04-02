@@ -64,24 +64,27 @@ define([], function() {
         $scope.filteredFilms.tags = selectedFilter;
         //tell homecontroller to change the filter
         var currentFilter = capitalizeFirstLetter(selectedFilter);
-        $scope.$emit('selectedFilter', currentFilter);
-       
+        $scope.$emit('selectedFilter', currentFilter);      
       } 
       else {
         $scope.filteredFilms.tags = '';
+        $location.search('filter', 'all');
         $scope.subheader = {
-          quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
+          quote: "Hi, I’m a filmmaker and midcut features my film works. Enjoy!",
           author: "Trang Nguyen",
           tag: "all"
         };
+        $scope.$emit('selectedFilter', "All films");
       } 
     } else {
       $scope.filteredFilms.tags ='';
+      $location.search('filter', 'all');
       $scope.subheader = {
-        quote: "Hi, I'm a filmmaker and midcut features my film works. Enjoy!",
+        quote: "Hi, I’m a filmmaker and midcut features my film works. Enjoy!",
         author: "Trang Nguyen",
         tag: "all"
-      }; 
+      };
+      $scope.$emit('selectedFilter', "All films"); 
     }
         
     // if film title exist

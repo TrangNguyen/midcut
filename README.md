@@ -14,4 +14,5 @@ Using ngResource, reading json files which are divided for each film (and perhap
 * Add contact and about page to the footer navigation
 * Fix the browser history with back button. Because of the url rewrite without reload(?)
 * Add favicon
+* Collect content for the site, cover images of all films.
 

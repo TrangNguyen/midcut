@@ -1,8 +1,8 @@
 {
-  "id": "hanoi–transition"
+  "id": "hanoi–transition",
   "title": "Hanoi – Transition",
-  "abstract": "Streets of Hanoi, on the day of the three kitchen guardians brought inside out at a public square in Potsdam, Germany.",
-  "filminfo": "2011, 21:00 min.",
+  "abstract": "Streets of Hanoi, on the day of the three kitchen guardians brought inside out at a public square in Potsdam, Germany. Three video panels and six audio channels helps recreating a transition to Hanoi.",
+  "filminfo": "2011, 21:00 min. Installation",
   "credits": [
     "Concept & Realisation by Trang Nguyen",
     "Graphics & Animation by Roman Bejnar"      
@@ -15,7 +15,7 @@
   "awards": [
   
   ],
-  "vidSrc": "https://player.vimeo.com/video/52103917?title=0&byline=0&portrait=0&color=ff5025",
+  "vidSrc": "https://player.vimeo.com/video/51953259?title=0&byline=0&portrait=0&color=cfff03",
   "tags": "installation",
   "poster": "filmposters/hanoi-transition.jpg"  
 }

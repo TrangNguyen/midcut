@@ -67,6 +67,9 @@
         </li>
         <li ng-repeat="filter in allFilters">
           <a class="{{filter.name}}" href="#/en/film/?filter={{filter.name}}" ng-click="changeFilter(filter.title)">{{filter.title}}</a>
+        </li>
+        <li>
+          <a class="about" href="#/en/about" ng-click="changeFilter('about')">About me</a>
         </li>   
       </ul>
     </nav>
@@ -75,25 +78,32 @@
     <ng-view></ng-view>
     
     <!-- Footer -->    
-    <footer id="footer">
-      <small class="left">&copy; Trang Nguyen 2015 | All rights reserved</small>
-      <ul class="inline-list">
-<!--        <li>
-          <a href=""><span>LinkedIn</span></a>
-        </li>
-        <li>
-          <a href=""><span>Google+</span></a>
-        </li>-->
-        <li>
-          <a href="skype:trangnguyen80?call"><span>Skype</span></a>
-        </li>
-        <li>
-          <a href="mailto:trangnguyen80@gmail.com"><span>Email</span></a>
-        </li>
-        <li>
-          <a href="#/en/about">About me</a>
-        </li>
-      </ul>      
+    <footer id="footer" class="row">
+        <div class="small-12 columns medium-6">
+          <small>&copy; Trang Nguyen 2015 | All rights reserved</small>
+        </div>
+        <div class="small-12 columns medium-6">
+          <ul class="inline-list">
+    <!--        <li>
+              <a href=""><span>LinkedIn</span></a>
+            </li>
+            <li>
+              <a href=""><span>Google+</span></a>
+            </li>-->
+            <li>
+              <a href="skype:trangnguyen80?call"><span>Skype</span></a>
+            </li>
+            <li>
+              <a href="mailto:trangnguyen80@gmail.com"><span>Email</span></a>
+            </li>
+            <li>
+              <a ng-click="goToAbout()">About me</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
     </footer>
+    
   </body>
 </html>

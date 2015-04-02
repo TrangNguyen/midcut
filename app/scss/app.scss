@@ -23,7 +23,7 @@ $globalspacing: rem-calc(10);
 }
 
 html, body {
-  background-color: $body-bg;
+  background-color: $lightgrey;
   height: 100%;
 }
 
@@ -101,6 +101,10 @@ html, body {
       background-color: $fiction;
     }
     
+    &.About {
+      background-color: $mediumgrey;
+    }
+    
     &.active {
       background-color: $mediumgrey !important;
       color: $mediumgrey;
@@ -159,14 +163,7 @@ html, body {
       &:hover {
         background-color: $lightgrey;
       }
-    }
-    &.contact {
-      background-color: $mediumgrey;
-      &:hover {
-        background-color: $lightgrey;
-      }
-    }   
-      
+    } 
   } 
   
 }
@@ -203,6 +200,7 @@ html, body {
 
 #filmsOverview {
   padding-top: ($globalspacing * 2);
+  background-color: #fff;
   
   li {
     position:relative;
@@ -290,22 +288,26 @@ a.extra {
 #about-page {
   padding-top: (($globalspacing * 4) + rem-calc(50));
   
-  li {
-    &.fiction {
-       border: 2px solid  $fiction;       
-     }
-    
-    &.installation {
-      border: 2px solid  $installation;
-      }
-    
-    &.documentary {
-      border: 2px solid  $documentary;
-      }   
+  a { 
+    color: $black;
+    text-decoration: underline;
+    @include noselect();
+  }
+  
+  #banner {
+    max-width: 100%;
+    max-height: rem-calc(50);
+    width: 100%;
+    height: rem-calc(50);
+    background-color: $installation;
   }
   
   #filmography {
-    background-color: $lightgrey;
+    background-color: #fff;
+  }
+    
+  #filmography, #imprint {
+    padding-top: $globalspacing;
     
     ul {
       list-style-type: none;
@@ -319,4 +321,10 @@ a.extra {
       
     }    
   }
+}
+
+#footer {
+  left: ($globalspacing * 2);
+  right: ($globalspacing * 2);
+  padding-top: $globalspacing;
 }
