@@ -7,6 +7,9 @@ define([], function() {
       return string.charAt(0).toUpperCase() + string.slice(1);
     }
     
+    //default to close the extra
+    $scope.extra = false;
+    
     //filter list    
     $scope.allFilters = [
     { name: "documentary",
@@ -69,21 +72,13 @@ define([], function() {
       else {
         $scope.filteredFilms.tags = '';
         $location.search('filter', 'all');
-        $scope.subheader = {
-          quote: "Hi, I’m a filmmaker and midcut features my film works. Enjoy!",
-          author: "Trang Nguyen",
-          tag: "all"
-        };
+        $scope.allFilms = true;// switch greeting for subheader
         $scope.$emit('selectedFilter', "All films");
       } 
     } else {
       $scope.filteredFilms.tags ='';
       $location.search('filter', 'all');
-      $scope.subheader = {
-        quote: "Hi, I’m a filmmaker and midcut features my film works. Enjoy!",
-        author: "Trang Nguyen",
-        tag: "all"
-      };
+      $scope.allFilms = true;// switch greeting for subheader
       $scope.$emit('selectedFilter', "All films"); 
     }
         
@@ -109,7 +104,7 @@ define([], function() {
       $scope.loading = true;
       var currentFilter = $location.search().filter;
 //      $scope.selectedFilter = currentFilter;
-      
+      $scope.extra = false; // close the extra section
       ScrollService.scrollTo('top', 10);
       
       if($scope.playerOpened = true) {

@@ -1,15 +1,19 @@
 <div class="row">
   <div class="small-12 columns">
-    <div id="subheader" ng-show="!playerOpened">
+    <div id="subheader" ng-show="!playerOpened && !allFilms">
       <h1>&#8220;{{subheader.quote}}&#8221;<h1>
       <p><span class="{{subheader.tag}}"> – {{subheader.author}}</span>
       </p>
+    </div>
+    
+    <div id="greetings" ng-show="!playerOpened && allFilms">
+      <h1>Hi, my name is Trang Nguyen, a filmmaker in Berlin. You can find more <a ng-click="goToAbout()">about me</a> or enjoy my works below!<h1>
     </div>
   </div>
 </div>
 
 <div ng-show="loading" id="loader">
- <h1>Loading ...</h1>
+ <p>Loading</p>
 </div>
 
 <div class="row current-film" ng-show="playerOpened">

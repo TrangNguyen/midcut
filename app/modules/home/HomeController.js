@@ -14,6 +14,7 @@ define([], function() {
       title: "Installation"
     }];
     
+    
     /**
      * HELPER Searches an array for an object with a specified property.
      */
@@ -25,7 +26,10 @@ define([], function() {
     }    
     // Treat about route specially    
     if($location.path().split('/')[2]==="about") {
-      $scope.selectedFilter = "About me";    
+      $scope.selectedFilter = "About me";
+      $scope.page ="about";   
+    } else {
+      $scope.page = "films";
     }
     //if filmscontroller return a filter
     $scope.$on('selectedFilter', function(event, value) {

@@ -106,8 +106,8 @@ html, body {
     }
     
     &.active {
-      background-color: $mediumgrey !important;
-      color: $mediumgrey;
+      background-color: $black !important;
+      color: $black;
     }
   }
    
@@ -134,34 +134,35 @@ html, body {
       background-color: $grey;
       color: $lightgrey;
       &:hover {
-        background-color: $black;
+        background-color: lighten( $lightgrey, 100% );
+        color: $black;
       }
     }
     
      &.fiction {
        background-color: $fiction;
        &:hover {
-         background-color: $lightgrey;
+         background-color: lighten( $lightgrey, 100% );
        }
      }
     
     &.installation {
       background-color: $installation;
       &:hover {
-        background-color: $lightgrey;
+        background-color: lighten( $lightgrey, 100% );
       }
     }
     
     &.documentary {
       background-color: $documentary;
       &:hover {
-        background-color: $lightgrey;
+        background-color: lighten( $lightgrey, 100% );
       }
     }
     &.about {
-      background-color: $mediumgrey;
+      background-color: lighten( $lightgrey, 15% );
       &:hover {
-        background-color: $lightgrey;
+        background-color: lighten( $lightgrey, 100% );
       }
     } 
   } 
@@ -180,7 +181,9 @@ html, body {
 	&.All {
 	  border-bottom: 12px solid $lightgrey !important;
 	}
-	
+	&.active {
+	  border-bottom: 12px solid $lightgrey !important;
+	}
 }
 
 .arrow-down {
@@ -214,7 +217,7 @@ html, body {
     position: absolute;
     top: ($globalspacing / 2);
     left: ($globalspacing * 2);
-    z-index: 98;
+    z-index: 97;
     
     font-size: $paragraph-font-size - rem-calc(2);
     
@@ -247,6 +250,35 @@ html, body {
   }
 }
 
+#greetings {
+  padding-top: (($globalspacing * 6) + rem-calc(50));
+  padding-bottom: ($globalspacing * 6);
+  @media #{$medium-up} {
+    padding-left: (($globalspacing * 4) + rem-calc(50));
+    padding-right: (($globalspacing * 4) + rem-calc(50));
+  }
+//  a {
+//    border-bottom: 2px solid $black;
+//    &:hover  {
+//      cursor: pointer;
+//    }
+//  }
+  a {
+    display: inline-block;
+    position: relative;
+  }
+  a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 2px solid;
+    margin-top: 5px;
+  }
+}
+
 .current-film {
   padding-top: (($globalspacing * 4) + rem-calc(50));
   background-color: $lightgrey ;
@@ -264,9 +296,12 @@ a.extra {
     margin-left: 0;
     
     li {
-      border-top: 1px solid $mediumgrey;
       font-size: $paragraph-font-size - rem-calc(2);
       padding: ($globalspacing / 4);
+      border-top: 1px solid $mediumgrey;
+      &:last-of-type {
+        border-bottom: 1px solid $mediumgrey;
+      }
     }
     
   }
@@ -279,14 +314,53 @@ a.extra {
 
 #loader {
   position: fixed;
-  top: 0;
-  right: 0;
-  background-color: $documentary;
-  z-index: 100;
- 
+  top: ($globalspacing * 2);
+  right: ($globalspacing * 2);
+  width: rem-calc(100);
+  height: rem-calc(50);
+  max-width: rem-calc(100);
+  max-height: rem-calc(50);
+  z-index: 98;
+  background-color: $mediumgrey; 
+  
+  p {
+    display: block;
+    padding: $globalspacing;
+    color: $black;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    height: rem-calc(50);
+    max-height: rem-calc(50);
+    line-height: rem-calc(30);
+  }
 }
+
+
 #about-page {
-  padding-top: (($globalspacing * 4) + rem-calc(50));
+  
+  // change background color on about page
+  
+  html, body.about-page {
+    background-color: $white;
+  }
+  
+  ul.inline-list li {
+    margin-left: 0;
+    margin-right: $globalspacing;
+    a {
+      text-decoration: none;
+    }
+  }
+  
+  h1 {
+    padding-top: ($globalspacing * 2);
+    padding-bottom: ($globalspacing);
+  }
+  
+  h2 {
+    line-height: 1.4;
+  }
   
   a { 
     color: $black;
@@ -294,20 +368,18 @@ a.extra {
     @include noselect();
   }
   
-  #banner {
-    max-width: 100%;
-    max-height: rem-calc(50);
-    width: 100%;
-    height: rem-calc(50);
-    background-color: $installation;
+  #about-me {
+    padding-bottom: $globalspacing;
+    background-color: $white;
   }
   
   #filmography {
-    background-color: #fff;
-  }
+    background-color: $lightgrey;
+    padding-bottom: $globalspacing;
     
-  #filmography, #imprint {
-    padding-top: $globalspacing;
+    h2 span, li span {
+      color: darken( $mediumgrey, 15% );
+    }
     
     ul {
       list-style-type: none;
@@ -317,14 +389,48 @@ a.extra {
         border-top: 1px solid $mediumgrey;
         font-size: $paragraph-font-size - rem-calc(2);
         padding: ($globalspacing / 4);
+        &:last-of-type {
+          border-bottom: 1px solid $mediumgrey;
+        }
       }
       
     }    
   }
+  
+  #imprint, #credits {
+    background-color: $white;
+    ul {
+      list-style-type: none;
+      margin-left: 0;
+      
+      li {
+        font-size: $paragraph-font-size - rem-calc(2);
+        padding: ($globalspacing / 4);
+        border-top: 1px solid lighten( $mediumgrey, 15% );
+        &:last-of-type {
+          border-bottom: 1px solid lighten( $mediumgrey, 15% );
+        }
+      }
+      
+    }    
+  }
+  
+  
+  
+  #credits {
+    padding-bottom: $globalspacing;
+  }
 }
+
+
 
 #footer {
   left: ($globalspacing * 2);
   right: ($globalspacing * 2);
   padding-top: $globalspacing;
+  background-color: $lightgrey;
+  ul.inline-list li {
+    margin-left: 0;
+    margin-right: $globalspacing;
+  }
 }
