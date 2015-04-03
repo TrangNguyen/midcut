@@ -9659,62 +9659,66 @@ a.extra {
   padding-bottom: 0.625rem;
   background-color: #FFFFFF;
 }
-/* line 376, ../scss/app.scss */
+/* line 374, ../scss/app.scss */
+#about-page #about-me h2 {
+  padding-bottom: 0.625rem;
+}
+/* line 379, ../scss/app.scss */
 #about-page #filmography {
   background-color: #cacaca;
   padding-bottom: 0.625rem;
 }
-/* line 380, ../scss/app.scss */
+/* line 383, ../scss/app.scss */
 #about-page #filmography h2 span, #about-page #filmography li span {
   color: #7f7f7f;
 }
-/* line 384, ../scss/app.scss */
+/* line 387, ../scss/app.scss */
 #about-page #filmography ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 388, ../scss/app.scss */
+/* line 391, ../scss/app.scss */
 #about-page #filmography ul li {
   border-top: 1px solid #a5a5a5;
   font-size: 0.875rem;
   padding: 0.15625rem;
 }
-/* line 392, ../scss/app.scss */
+/* line 395, ../scss/app.scss */
 #about-page #filmography ul li:last-of-type {
   border-bottom: 1px solid #a5a5a5;
 }
-/* line 400, ../scss/app.scss */
+/* line 403, ../scss/app.scss */
 #about-page #imprint, #about-page #credits {
   background-color: #FFFFFF;
 }
-/* line 402, ../scss/app.scss */
+/* line 405, ../scss/app.scss */
 #about-page #imprint ul, #about-page #credits ul {
   list-style-type: none;
   margin-left: 0;
 }
-/* line 406, ../scss/app.scss */
+/* line 409, ../scss/app.scss */
 #about-page #imprint ul li, #about-page #credits ul li {
   font-size: 0.875rem;
   padding: 0.15625rem;
   border-top: 1px solid #cbcbcb;
 }
-/* line 410, ../scss/app.scss */
+/* line 413, ../scss/app.scss */
 #about-page #imprint ul li:last-of-type, #about-page #credits ul li:last-of-type {
   border-bottom: 1px solid #cbcbcb;
 }
-/* line 420, ../scss/app.scss */
+/* line 423, ../scss/app.scss */
 #about-page #credits {
   padding-bottom: 0.625rem;
 }
 
-/* line 427, ../scss/app.scss */
+/* line 430, ../scss/app.scss */
 #footer {
   left: 1.25rem;
   right: 1.25rem;
   padding-top: 1.25rem;
   background-color: #cacaca;
 }
-/* line 432, ../scss/app.scss */
+/* line 435, ../scss/app.scss */
 #footer ul.inline-list li {
   margin-left: 0;
   margin-right: 0.625rem;

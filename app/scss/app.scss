@@ -371,6 +371,9 @@ a.extra {
   #about-me {
     padding-bottom: $globalspacing;
     background-color: $white;
+    h2 {
+      padding-bottom: $globalspacing;
+    }
   }
   
   #filmography {
