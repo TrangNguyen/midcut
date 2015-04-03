@@ -9711,7 +9711,7 @@ a.extra {
 #footer {
   left: 1.25rem;
   right: 1.25rem;
-  padding-top: 0.625rem;
+  padding-top: 1.25rem;
   background-color: #cacaca;
 }
 /* line 432, ../scss/app.scss */

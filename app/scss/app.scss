@@ -427,7 +427,7 @@ a.extra {
 #footer {
   left: ($globalspacing * 2);
   right: ($globalspacing * 2);
-  padding-top: $globalspacing;
+  padding-top: ($globalspacing * 2);
   background-color: $lightgrey;
   ul.inline-list li {
     margin-left: 0;
