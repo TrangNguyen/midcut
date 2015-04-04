@@ -266,6 +266,7 @@ module.exports = function (grunt) {
       grunt.task.run("copy:filmposters");
       grunt.task.run("copy:filmresources");
       grunt.task.run("copy:modules");
+      grunt.task.run("copy:images");
       grunt.task.run("copy:htaccess");
       grunt.task.run("targethtml:build");
       grunt.task.run("manifest");
