@@ -103,7 +103,6 @@ define([], function() {
     $scope.showFilm = function(id) {
       $scope.loading = true;
       var currentFilter = $location.search().filter;
-//      $scope.selectedFilter = currentFilter;
       $scope.extra = false; // close the extra section
       ScrollService.scrollTo('top', 10);
       

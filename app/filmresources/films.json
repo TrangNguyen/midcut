@@ -59,18 +59,6 @@
     "poster": "filmposters/moon.jpg"   
   },
   {
-    "id": "lil-a",
-    "title": "lil’A",
-    "tags": "documentary",
-    "poster": "filmposters/lil-a.jpg" 
-  },
-  {
-    "id": "pao-story",
-    "title": "Pao’s story",
-    "tags": "fiction",
-    "poster": "filmposters/pao-story.jpg" 
-  },
-  {
     "id": "mannequin",
     "title": "Mannequin",
     "tags": "fiction",
@@ -81,5 +69,10 @@
     "title": "Lottoboy",
     "tags": "documentary",
     "poster": "filmposters/lottoboy.jpg"   
-  }
-]
+  },
+  {
+    "id": "pao-story",
+    "title": "Pao’s story",
+    "tags": "fiction",
+    "poster": "filmposters/pao-story.jpg" 
+  }]
