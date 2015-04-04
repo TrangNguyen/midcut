@@ -5,7 +5,7 @@ Trang Nguyen's filmmaker portfolio
 
 Using ngResource, reading json files which are divided for each film (and perhaps language).
 
-[live version](midcut.com)
+[live version](http://midcut.com)
 
 ##ToDos
 
