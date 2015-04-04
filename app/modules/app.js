@@ -7,7 +7,7 @@ define(['angular', 'ngRoute', 'ngResource', 'ngSanitize', 'home/HomeModule', 'fi
   "use strict";
   var appName = "app";
 
-  var dependencies = ['ngRoute', 'ngResource', filmModule(), homeModule()];
+  var dependencies = ['ngRoute', 'ngResource', 'ngSanitize', filmModule(), homeModule()];
 
   var app = angular.module(appName, dependencies);
 

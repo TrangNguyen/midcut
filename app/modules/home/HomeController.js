@@ -1,7 +1,6 @@
 define([], function() {
   'use strict';
-  function HomeController($scope, $location, $window) {
-    
+  function HomeController($scope, $location, $window, ScrollService) {    
     
     //filter list    
     $scope.allFilters = [
@@ -15,6 +14,7 @@ define([], function() {
       title: "Installation"
     }];
     
+    
     /**
      * HELPER Searches an array for an object with a specified property.
      */
@@ -23,41 +23,44 @@ define([], function() {
         if (array[i][propertyName] === propertyValue) return i;
       }  
       return -1;
-    }
-         
-    // if filter exist on url, return the selectedFilter.
-    if($location.search().filter) {
-      var selectedFilter = $location.search().filter;
-      //compare against valid filters                  
-      var i = indexOfObjectWithProperty('name', selectedFilter, $scope.allFilters);
-      if(i > -1) {
-        $scope.selectedFilter = $scope.allFilters[i].title;
-        //console.log($scope.subheader);        
-      } 
-      else {
-        $location.search('filter', 'all');
-        $scope.selectedFilter = "All Films";
-      } 
+    }    
+    // Treat about route specially    
+    if($location.path().split('/')[2]==="about") {
+      $scope.selectedFilter = "About me";
+      $scope.page ="about";   
     } else {
-      $location.search('filter', 'all');
-      $scope.selectedFilter = "All Films";
+      $scope.page = "films";
     }
-    
+    //if filmscontroller return a filter
+    $scope.$on('selectedFilter', function(event, value) {
+      $scope.selectedFilter = value;
+    });
+        
     // when a filter on menu is selected
     $scope.changeFilter = function(tag) {
-      var j = indexOfObjectWithProperty('title', tag, $scope.allFilters);
-      if( j > -1) {
-        $scope.selectedFilter = tag;
-      }
-      else {
-        $location.search('filter', 'all');
-        $scope.selectedFilter = "All Films";
+      // treat about route differently
+      if(tag==='about') {
+        $scope.selectedFilter = "About me";
+      } else {
+        var j = indexOfObjectWithProperty('title', tag, $scope.allFilters);
+        if( j > -1) {
+          $scope.selectedFilter = tag;
+        } else {
+          $location.search('filter', 'all');
+          $scope.selectedFilter = "All Films";
+        }
       }
       $scope.toggle=!$scope.toggle;// close menu list
     };
-       
+    
+    //off by one bug case from footer
+    $scope.goToAbout = function() {
+      $scope.selectedFilter = "About me";
+      ScrollService.scrollTo('top', 10);
+      $window.location.href="#/en/about";  
+    };
   }
   
-  HomeController.$inject=['$scope', '$location', '$window'];
+  HomeController.$inject=['$scope', '$location', '$window',  'ScrollService'];
   return HomeController;
 });

@@ -1,7 +1,7 @@
 {
   "id": "finovo",
   "title": "finovo",
-  "abstract": "\"Fin\" is the end and \"novo\" is a new beginning, a photofilm about a cemetery café in Berlin.",
+  "abstract": "“Fin” is the end and “novo” is a new beginning, a photofilm about a cemetery café in Berlin. A café is a place for chatting. A cemetery is a place for introspection. The “cemetery-café” Finovo is a place where both is possible. Bernd, Dirk and Günther visit the graves of their life partners regularly – and then stop by the café to share their memories and experiences.",
   "filminfo": "2013, 13:00 min, Photofilm.",
   "credits": [
     "Directed by Claudio Winter",
@@ -19,7 +19,7 @@
   "awards": [
   
   ],
-  "vidSrc": "https://player.vimeo.com/video/64440726?title=0&byline=0&portrait=0&color=ff5025",
+  "vidSrc": "https://player.vimeo.com/video/64440726?title=0&byline=0&portrait=0&color=52ffff",
   "tags": "documentary",
   "poster": "filmposters/finovo.jpg" 
 }

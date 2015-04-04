@@ -1,19 +1,19 @@
 {
   "id": "lottoboy",
   "title": "Lottoboy",
-  "abstract": "Lottoboy follows a teenager selling lottery results on the streets of Hanoi.",
-  "filminfo": "2005, 3:00 min.",
+  "abstract": "Lottoboy follows a teenager selling lottery results on the streets of Hanoi. The precious 30 minutes between the actual lucky number drawing and its televison broadcasting send everyone crazy running for the results and allows Hai to earn his living.",
+  "filminfo": "2005, 3:00 min. Documentary",
   "credits": [
-    "Concept and Realisation by Trang Nguyen",
+    "Concept, directed, filmed and edited by Trang Nguyen",
     "Music by Pixelord"
   ],
   "festivals": [
-    "1st": "Carnival of eCreativity, Sattel, India 2013"
+    "Carnival of eCreativity, Sattel, India 2013"
   ],
   "awards": [
   
   ],
-  "vidSrc": "https://player.vimeo.com/video/30159810?title=0&byline=0&portrait=0&color=ff5025",
+  "vidSrc": "https://player.vimeo.com/video/30159810?title=0&byline=0&portrait=0&color=52ffff",
   "tags": "documentary",
-  "poster": "filmposters/blank.jpg"    
+  "poster": "filmposters/lottoboy.jpg"    
 }

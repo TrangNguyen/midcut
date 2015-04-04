@@ -179,20 +179,17 @@ module.exports = function (grunt) {
       compile: {
         options: {
           baseUrl: "<%= pkg.folders.jsSource %>",
-          name: "../../../bower_components/almond/almond",
+          name: "../../bower_components/almond/almond",
           include: "main",
           mainConfigFile: "<%= pkg.folders.jsSource %>/main.js",
           out: "<%= pkg.folders.build + pkg.name + '-' + pkg.version %>/modules/main.js",
           optimize: "uglify2",
           paths: {
-            'angular': '../../../bower_components/angular/angular',
-            'ngRoute': '../../../bower_components/angular-route/angular-route',
-            'ngResource': '../../../bower_components/angular-resource/angular-resource',
-						"angular-isotope": "../../../bower_components/angular-isotope/dist/angular-isotope",
-						"isotope": "../../../bower_components/isotope/jquery.isotope.min",
-//            'ngTouch': '../../../bower_components/angular-touch/angular-touch',	
-//            'ngAnimate': '../../../bower_components/angular-animate/angular-animate',
-            "app": "../../../app/modules/app"
+            'angular': '../../bower_components/angular/angular',
+            'ngRoute': '../../bower_components/angular-route/angular-route',
+            'ngResource': '../../bower_components/angular-resource/angular-resource',
+            'ngSanitize': '../../bower_components/angular-sanitize/angular-sanitize',
+						'app': '../../app/modules/app'
 
           },
           generateSourceMaps: false,
@@ -269,6 +266,7 @@ module.exports = function (grunt) {
       grunt.task.run("copy:filmposters");
       grunt.task.run("copy:filmresources");
       grunt.task.run("copy:modules");
+      grunt.task.run("copy:images");
       grunt.task.run("copy:htaccess");
       grunt.task.run("targethtml:build");
       grunt.task.run("manifest");

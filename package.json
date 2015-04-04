@@ -2,6 +2,11 @@
   "name": "midcut",
   "author": "Trang Nguyen <trangnguyen80@gmail.com>",
   "description": "Trang Nguyen's filmmaker portfolio",
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/TrangNguyen/midcut"
+  },
+  "homapge": "http://www.midcut.com",
   "version": "0.0.1",
   "devDependencies": {
     "karma": "0.12.x",

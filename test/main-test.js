@@ -26,7 +26,7 @@
 			'angular-route':'/base/bower_components/angular-route/angular-route',		
 			'mocks':'/base/bower_components/angular-mocks/angular-mocks'
 //			'angular-touch': '/base/bower_components/angular-touch/angular-touch',
-//			'angular-animate':'/base/bower_components/angular-animate/angular-animate',
+			'angular-animate':'/base/bower_components/angular-animate/angular-animate',
 //			'translate': '/base/bower_components/angular-translate/angular-translate',
 //      		'translate-static-loader': '/base/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files',
 //      		'translate-handler-log': '/base/bower_components/angular-translate-handler-log/angular-translate-handler-log'
@@ -37,7 +37,7 @@
 			'angular-route':{ deps:['angular'], exports:'angular-route' },
 			'mocks':{ deps:['angular'], exports:'mocks' },
 //			'angular-touch':{ deps:['angular'], exports:'ngTouch' },
-//			'angular-animate':{ deps:['angular'], exports:'ngAnimate' },
+			'angular-animate':{ deps:['angular'], exports:'ngAnimate' },
 //			'translate': { deps: ['angular']},
 //      		'translate-static-loader': { deps: ['translate']},
 //      		'translate-handler-log': { deps: ['translate']}

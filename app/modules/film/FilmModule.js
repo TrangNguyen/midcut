@@ -4,7 +4,6 @@ define(['angular', 'film/FilmsENController', 'film/FilmsENFactory'], function(an
   var module= angular.module(moduleName, ['ngRoute']);
   
   module.controller('FilmsENController', FilmsENController);
-//  module.controller('FilmENController', FilmENController);
   module.factory('FilmsENFactory', FilmsENFactory);
 
   
