@@ -1,6 +1,6 @@
 {
 	"name": "midcut",
-	"version": "0.0.1",
+	"version": "0.0.3",
 	"main": "app/css/app.css",
 	"ignore": [
 		".jshintrc",
