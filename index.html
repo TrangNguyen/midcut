@@ -1,0 +1,96 @@
+<!doctype html>
+<html manifest="midcut.manifest">
+
+<head>
+	<meta charset="utf-8">
+	<title>Midcut</title>	
+	<meta name="description" content="Berliner filmmaker Trang Nguyen's portfolio." />
+	<meta name="author" content="Design by Berliner Süden. Development by Trang Nguyen" />
+	<meta name="keywords" content="filmmaker, editor, Trang Nguyen, Berlin, Germany, films, photofilms" />
+	<meta name="viewport" id="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, initial-scale=1.0">
+	
+	<!--favicon-->
+	<link rel="apple-touch-icon-precomposed" sizes="57x57" href="images/favicon/apple-touch-icon-57x57.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="images/favicon/apple-touch-icon-114x114.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="images/favicon/apple-touch-icon-72x72.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="images/favicon/apple-touch-icon-144x144.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="60x60" href="images/favicon/apple-touch-icon-60x60.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="120x120" href="images/favicon/apple-touch-icon-120x120.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="76x76" href="images/favicon/apple-touch-icon-76x76.png" />
+	<link rel="apple-touch-icon-precomposed" sizes="152x152" href="images/favicon/apple-touch-icon-152x152.png" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-196x196.png" sizes="196x196" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-96x96.png" sizes="96x96" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-32x32.png" sizes="32x32" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-16x16.png" sizes="16x16" />
+	<link rel="icon" type="image/png" href="images/favicon/favicon-128.png" sizes="128x128" />
+	<meta name="application-name" content="&nbsp;"/>
+	<meta name="msapplication-TileColor" content="#FFFFFF" />
+	<meta name="msapplication-TileImage" content="mstile-144x144.png" />
+	<meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+	<meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+	<meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+	<meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+	
+	
+	<link rel="stylesheet" href="css/midcut.css">
+	<script src="modules/main.js" data-main="main"></script>
+	
+	
+	
+	
+	<!--Load filson pro font-->
+	<script src="//use.typekit.net/nnk2cuq.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+  
+  </head>
+  
+  <body ng-controller="HomeController" id="top" ng-class="{'about-page': page==='about'}">
+    <!-- Main navigation-->
+    <div id="logo" class="{{selectedFilter}}" ng-class="{active: toggle===true}">
+      <a ng-click="toggle=!toggle"><img src="images/midcut2.svg"></a>
+    </div>   
+    <nav id="mainNav" role="navigation"> 
+      <a id="navToggle" class="toggle" ng-click="toggle=!toggle">
+        <span  ng-class="{active: toggle===true}" class="{{selectedFilter}}" ng-bind="selectedFilter"></span>
+        <i ng-class="{'arrow-up active': toggle===true, 'arrow-down':toggle!==true}" class="{{selectedFilter}}"></i>
+      </a>    
+      <ul id="filmNav" ng-show="toggle">
+        <li>
+          <a class="all" href="#/en/film/?filter=all" ng-click="changeFilter('')">All films</a>
+        </li>
+        <li ng-repeat="filter in allFilters">
+          <a class="{{filter.name}}" href="#/en/film/?filter={{filter.name}}" ng-click="changeFilter(filter.title)">{{filter.title}}</a>
+        </li>
+        <li>
+          <a class="about" href="#/en/about" ng-click="changeFilter('about')">About me</a>
+        </li>   
+      </ul>
+    </nav>
+    
+    <!--content-->
+    <ng-view></ng-view>
+    
+    <!-- Footer -->    
+    <footer id="footer" class="row">
+        <div class="small-12 medium-6 columns">
+          &copy; 2015 Trang Nguyen | All rights reserved
+        </div>
+        <div class="small-12 medium-6 columns">
+          <ul class="inline-list">
+            <li>
+              <a target="_blank" href="https://plus.google.com/+TrangNguyen80"><span>Google+</span></a>
+            </li>
+            <li>
+              <a href="mailto:trangnguyen80@gmail.com"><span>Email</span></a>
+            </li>
+            <li>
+              <a ng-click="goToAbout()">About</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    
+    </footer>
+    
+  </body>
+</html>
